@@ -7,14 +7,12 @@ class App {
   constructor() {
     this.$App = document.createElement("div");
     this.$App.className = "root";
-
     this.$Navbar = new Navbar();
   }
 
   render($parent: HTMLElement) {
     this.$Navbar.render(this.$App);
     $parent.appendChild(this.$App);
-    console.log("test");
   }
 }
 
