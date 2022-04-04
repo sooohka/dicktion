@@ -14,6 +14,7 @@ class App {
   render($parent: HTMLElement) {
     this.$Navbar.render(this.$App);
     $parent.appendChild(this.$App);
+    console.log("test");
   }
 }
 
