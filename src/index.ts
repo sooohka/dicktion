@@ -1,13 +1,13 @@
-import Counter from "./components/counter.js";
+import { StateType } from "./types/index.type";
 
 class App {
   $App: HTMLDivElement;
 
   $body: HTMLElement;
 
-  state: { count: number };
+  state: StateType;
 
-  $counter: any;
+  // state: StateType;
 
   constructor() {
     this.$App = document.createElement("div");
@@ -15,14 +15,19 @@ class App {
     this.$App.className = "root";
     this.$body.appendChild(this.$App);
     this.state = {
-      count: 0,
+      inputValue: "",
+      searchedData: null,
+      openAlert: false,
+      searchLog: [],
+      loading: false,
+      isFocus: false,
     };
-    this.$counter = new Counter(this.state.count);
+
     this.render();
   }
 
   render() {
-    this.$counter.attach(this.$App);
+    console.log(this.state.inputValue);
   }
 }
 
