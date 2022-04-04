@@ -8,7 +8,7 @@ function createEl(
   const el = document.createElement(key);
   if (typeof classList === "string") {
     el.classList.add(...classList.split(" "));
-  } else if (typeof classList === "object") {
+  } else if (Array.isArray(classList)) {
     el.classList.add(...classList);
   }
   return el;
